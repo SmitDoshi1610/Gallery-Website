@@ -25,28 +25,27 @@ const Gallery = () => {
 
   useEffect(() => {
     fetchData();
-    setMessage('No images Found');
   },[]);
 
   return (
-    <div className='container'>
+    <div className='fluid-container bg-dark'>
 
-      <div className='d-flex justify-content-center align-items-center mt-2'>
+      <div className='fluid-container d-flex justify-content-center align-items-center mt-2'>
         
-          <div className='input-group search-container col-12 flex-nowrap'>
+          <div className='input-group search-container col-8 flex-nowrap mt-3'>
             <span className='input-group-text' id='addon-wrapping'>Search</span>
-            <input type='text' id='query' className='form-control' name='search' aria-label='Enter to Serach...' aria-describedby='addon-wrapping' onChange={fetchData}></input>
+            <input type='text' id='query' className='form-control' placeholder='Enter to Search...' name='search' aria-label='Enter to Serach...' aria-describedby='addon-wrapping' onChange={fetchData}></input>
           </div>
       </div>
 
-      <div className='container d-flex row mt-4'>
+      <div className='container justify-content-center align-items-center offset-1 row mt-4'>
         {
           data.map((d) => {
             return(
               <>
-              <div className="col-3">
-              <div id={d.id} className="p-3">
-                <img src={d.webformatURL} alt={d.type} className='img img-fluid img-thumbnail mx-auto d-block' width='100%' height='100%'/>
+              <div className="fluid-container col-4 container d-flex">
+              <div id={d.id} className="p-2">
+                <img src={d.webformatURL} alt={d.type} className='img-fluid img-thumbnail mx-auto d-block' width='100%' height='100%'/>
               </div>
               </div>
               </>

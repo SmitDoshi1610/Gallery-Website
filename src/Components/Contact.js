@@ -1,11 +1,11 @@
 import React from 'react'
-import './../App.css'
+// import './../App.css'
 
 const Contact = () => {
   return (
-    <div className='contianer'>
+    <div className='fluid-container'>
       <div className='d-flex justify-content-center align-items-center'>
-        <form className='flex-column col-6'>
+        <form className='flex-column col-5'>
           <div className='mb-3 mt-5 form-group'>
           <label for="Name" className='form-label'>Name</label><br/>
           <input type="text" className='form-control form-control' id="Name" placeholder='Enter your Name'/>
@@ -26,9 +26,7 @@ const Contact = () => {
           <textarea className='form-control' id='Message' cols="10" rows='2'  placeholder='Enter your Message'></textarea>
           </div>
 
-          <div className='form-group'>
-            <button type='submit' className='form-control w-50 offset-3 btn btn-primary'>Sumbit</button>
-          </div>
+            <button type='submit' className='btn btn-primary offset-3'>Sumbit</button>
         </form>
       </div>
     </div>

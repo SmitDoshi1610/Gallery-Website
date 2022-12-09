@@ -6,21 +6,10 @@
 i{
     margin-left: 20px;
 }
-ul{
-    list-style-type: none;
+
+li > .nav-hover:hover{
+    color: rgb(182, 41, 41);
 }
-li{
-    padding: 10px;
-}
-ul:last-child{
-    padding-right: 10px;
-}
-li > a{
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-a:hover{
-    text-decoration: underline;
-    color: darkgray;
+span{
+    font-weight: 500;
 }

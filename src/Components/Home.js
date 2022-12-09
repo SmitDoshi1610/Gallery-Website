@@ -1,42 +1,33 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './../App.css'
+import Navbar from './Navbar'
+import logo from '../3.jpg'
+import { Link } from 'react-router-dom'
+import './home.css'
 
 const Home = () => {
-  const [hours, setHours] = useState(0);
-  const [minute, setMinute] = useState(0);
-  const [second, setSecond] = useState(0);
-
-  const findTime = () => {
-
-    let date = new Date();
-    console.log(date);
-    let h = date.getHours();
-    let m = date.getMinutes();
-    let s = date.getSeconds();
-
-    setHours(h);
-    setMinute(m);
-    setSecond(s);
-   
-  }
-  setInterval(findTime, 1000);
-
+ 
   return (
-    <div className="fluid-container bg-dark text-white" style={{height:'85vh'}}>
-      <div className='d-flex flex-column mh-100 justify-content-center align-items-center'>
-        <h1>Welcome to the Website</h1>
+    <>
+    <div className='fluid-container' style={{height:'80vh', position:'relative'}}>
+    <img src={logo} className='main img-fluid'/>
+    <div className="text-white">
+      <div className='d-flex justify-content-center align-items-center'>
+      <main className="home-container">
+      <p>Hello 👋 I'm</p>
+      <section className="animation">
+        <div className="first"><div>Problem Solver</div></div>
+        <div className="second"><div>Web Developer</div></div>
+        <div className="third"><div>Systems Engineer</div></div>
+      </section>
+      </main>
+      
+       <Link to='/contact'><button className='btn btn-primary'>Contact Us</button></Link>
         </div>
-
-        <div className='d-flex justify-content-center align-items-center'>
-          <div className='d-flex display'>
-            <h2 className='flex-inline'>{hours}<span>:</span></h2>
-            <h2 className='flex-inline'>{minute}<span>:</span></h2>
-            <h2 className='flex-inline'>{second}</h2>
-            
-          </div>
-        </div>
-      {/* </div> */}
+     
     </div>
+    </div>
+    </>
   )
 }
 
