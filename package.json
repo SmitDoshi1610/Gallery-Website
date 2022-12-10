@@ -1,7 +1,7 @@
 {
   "name": "practice",
   "version": "0.1.0",
-  "homepage": "https://github.com/SmitDoshi1610/Gallery-Website.git",
+  "homepage": "https://SmitDoshi1610.github.io/Gallery-Website",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.2.3",
