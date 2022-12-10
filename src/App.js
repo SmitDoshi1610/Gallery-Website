@@ -8,9 +8,9 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 const App = ()=>{
   return(
     <>
+    <Navbar/>
     <BrowserRouter>
     <Routes>
-    <Navbar/>
      <Route element={<Home/>} exact path="/"/>
      <Route element={<Gallery/>} path="/gallery"/>
      <Route element={<About/>} path="/about"/>
